@@ -1,5 +1,7 @@
 # AWS Lambda Functions
 
+[![Python Lint](https://github.com/hammadhaqqani/AWS_Lambda/actions/workflows/python-lint.yml/badge.svg)](https://github.com/hammadhaqqani/AWS_Lambda/actions/workflows/python-lint.yml)
+[![GitHub Pages](https://github.com/hammadhaqqani/AWS_Lambda/actions/workflows/pages.yml/badge.svg)](https://hammadhaqqani.github.io/AWS_Lambda/)
 [![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-%23FF9900.svg?logo=aws-lambda&logoColor=white)](https://aws.amazon.com/lambda/)
 [![Python](https://img.shields.io/badge/Python-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
