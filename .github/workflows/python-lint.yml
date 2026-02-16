@@ -18,15 +18,15 @@ jobs:
         run: pip install flake8 boto3
       - name: Run flake8
         run: flake8 . --max-line-length=120 --count --statistics
-        continue-on-error: true
       - name: Python syntax check
         run: |
-          errors=0
           for f in $(find . -name "*.py"); do
-            python3 -c "import ast; ast.parse(open('$f').read())" 2>/dev/null || {
-              echo "Syntax issue: $f"
-              errors=$((errors + 1))
-            }
+            python3 -c "
+          import ast, sys
+          try:
+              ast.parse(open('$f').read())
+          except SyntaxError as e:
+              print(f'Syntax error in $f: {e}')
+              sys.exit(1)
+          "
           done
-          echo "$errors files with syntax issues (may be Python 2)"
-        continue-on-error: true
